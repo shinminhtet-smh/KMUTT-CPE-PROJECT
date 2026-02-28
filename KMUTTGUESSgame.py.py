@@ -12,20 +12,20 @@ def play_game():
         try:
             guess = int(input(f"Attempt {attempts + 1}: Enter your guess: "))
         except ValueError:
-            print("❌ Invalid input! Please enter a whole number.")
+            print(" Invalid input! Please enter a whole number.")
             continue
 
         attempts += 1
 
         if guess < secret_number:
-            print("🔼 Higher!")
+            print(" Higher!")
         elif guess > secret_number:
-            print("🔽 Lower!")
+            print(" Lower!")
         else:
-            print(f"🎉 Correct! You found it in {attempts} attempts.")
+            print(f" Correct! You found it in {attempts} attempts.")
             return True 
 
-    print(f"💀 Game Over! The number was {secret_number}.")
+    print(f" Game Over! The number was {secret_number}.")
     return False 
 
 
@@ -45,3 +45,4 @@ if __name__ == "__main__":
             continue 
         else:
             print("Invalid choice, but let's play again anyway!")
+
